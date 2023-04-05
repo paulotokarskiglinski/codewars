@@ -1,2 +1,2 @@
 # codewars
-Solution of Codewars' assignments in JavaScript and TypeScript
+Solution of Codewars' assignments in TypeScript.
