@@ -1,20 +1,16 @@
-export function duplicateCount(text: string): number{
-  // separete the text into an object (hash map)
-  // ignore case sensitive
-  // loop and count for every occurence of each character
-  // find how many of the characters has more than 1 occurence
-  // return this value
-  
-  const hashChars = {};
-  const arrChars = text.toLocaleLowerCase().split('');
+/*
+* Count the number of Duplicates
+* https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
+*
+* Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+*/
+
+export const = duplicateCount(text: string): number => {
+  let hashChars: any = {};
+  let arrChars: string[] = text.toLocaleLowerCase().split('');
 
   for (let char of arrChars)
     hashChars[char] = !hashChars[char] ? 1 : ++hashChars[char];
 
-  console.log(Object.values(hashChars))
-
-  return 0;
+  return Object.values(hashChars).filter(x => x && x > 1).length;
 }
-
-console.log('#1', duplicateCount('abcde'))
-console.log('#2', duplicateCount('indivisibility'))
