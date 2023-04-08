@@ -15,7 +15,7 @@
 
 export const findMissingLetter = (array: string[]): string => {
   const isUpper: boolean = array[0] === array[0].toUpperCase();
-  const alphabet: string = isUpper ? 'abcdefghijklmnopqrstuvwxyz'.toUpperCase() : 'abcdefghijklmnopqrstuvwxyz';
+  const alphabet: string = isUpper ? 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' : 'abcdefghijklmnopqrstuvwxyz';
   
   for (let i = 0, index = alphabet.indexOf(array[0]); i < array.length; i++, index++)
     if (array[i] !== alphabet[index])
