@@ -1,21 +1,25 @@
-export function accum(s: string): string {
-  // let result: string = '';
-  // const arr: string[] = s.split('');
+/*
+* Mumbling
+* https://www.codewars.com/kata/5667e8f4e3f572a8f2000039
+*
+* This time no story, no theory. The examples below show you how to write function accum:
+* Examples:
+* accum("abcd") -> "A-Bb-Ccc-Dddd"
+* accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+* accum("cwAt") -> "C-Ww-Aaa-Tttt"
+* The parameter of accum is a string which includes only letters from a..z and A..Z.
+*/
 
-  // for (let c = 0; c < arr.length; c++) {
-  //   for (let i = 0; i < c + 1; i++) {
-  //     if (i === 0 && c !== 0)
-  //       result += '-';
+export const accum = (s: string): string => s.split('').map((value, index) => index === 0 ? value.toUpperCase() : value.toLowerCase().repeat(index)).join('-');
 
-  //     result += i === 0 ? arr[c].toUpperCase() : arr[c].toLowerCase();
-  //   }
-  // }
-
-  // return result;
-
-  return s.split('').map((value, index) => index === 0 ? value.toUpperCase() : value.toLowerCase().repeat(index)).join('-');
-}
-
-console.log('#1', accum('abcd'), 'should be `A-Bb-Ccc-Dddd`')
-console.log('#2', accum('RqaEzty'), 'should be `R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy`')
-console.log('#3', accum('ZpglnRxqenU') === 'Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu', 'should be `true`')
+// Solution 2
+// export function accum(s: string): string {
+//   let result: string = '';
+//   const arr: string[] = s.split('');
+//   for (let c = 0; c < arr.length; c++) {
+//     for (let i = 0; i < c + 1; i++)
+//       result += i === 0 ? arr[c].toUpperCase() : arr[c].toLowerCase();
+//     result += c < arr.length - 1 ? '-' : '';
+//   }
+//   return result;
+// }
