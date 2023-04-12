@@ -1,6 +1,9 @@
-export function findShort(s: string): number {
-  return s.split(' ').reduce((acc, x) => acc = x.length < acc ? x.length : acc, Number.MAX_VALUE);
-}
+/*
+* Shortest Word
+* https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9
+*
+* Simple, given a string of words, return the length of the shortest word(s).
+* String will never be empty and you do not need to account for different data types.
+*/
 
-console.log('#1', findShort('abc a acbcd'), 'shoud be 1');
-console.log('#2', findShort('bitcoin take over the world maybe who knows perhaps'), 'shoud be 3');
+export const findShort = (s: string): number => s.split(' ').reduce((acc, x) => acc = x.length < acc ? x.length : acc, Number.MAX_VALUE);
