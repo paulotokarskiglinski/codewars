@@ -1,3 +1,12 @@
+/*
+* Sum of two lowest positive integers
+* https://www.codewars.com/kata/558fc85d8fd1938afb000014
+*
+* Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+* For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
+* [10, 343445353, 3453445, 3453545353453] should return 3453455.
+*/
+
 const sumTwoSmallestNumbers = (numbers: number[]): number => {
   const min1 = Math.min(...numbers);
   numbers.splice(numbers.indexOf(min1), 1);
@@ -5,6 +14,3 @@ const sumTwoSmallestNumbers = (numbers: number[]): number => {
 
   return min1 + min2;
 }
-
-console.log('#1', sumTwoSmallestNumbers([1, 2, 3]), 'should be 3')
-console.log('#2', sumTwoSmallestNumbers([1, 2, 2]), 'should be 3')
