@@ -1,7 +1,11 @@
-function solution(str: string, ending: string): boolean {
-  return str.slice(str.length - ending.length) === ending;
-}
+/*
+* String ends with?
+* https://www.codewars.com/kata/51f2d1cafc9c0f745c00037d
+*
+* Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+* Examples:
+* solution('abc', 'bc') // returns true
+* solution('abc', 'd') // returns false
+*/
 
-console.log('#1', solution('abc', 'bc'), true);
-console.log('#2', solution('abc', 'd'), false);
-console.log('#3', solution('test', 't'), true);
+const solution = (str: string, ending: string): boolean => str.slice(str.length - ending.length) === ending;
