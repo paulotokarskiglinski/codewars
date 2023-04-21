@@ -12,9 +12,6 @@
 */
 
 export const towerBuilder = (nFloors: number): string[] => {
-  if (nFloors === 1)
-    return ['*'];
-  
   let result: string[] = [];
   
   for (let i = 0, j = nFloors; i < nFloors; i++, j--)
