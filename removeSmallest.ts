@@ -12,6 +12,7 @@
 */
 
 const removeSmallest = (numbers: number[]): number[] => {
-  numbers.splice(numbers.indexOf(Math.min(...numbers)), 1);
-  return numbers;
+  let arr: number[] = [...numbers];
+  arr.splice(numbers.indexOf(Math.min(...numbers)), 1);
+  return arr;
 }
