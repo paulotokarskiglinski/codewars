@@ -12,5 +12,5 @@ export const duplicateCount = (text: string): number => {
   for (let char of arrChars)
     hashChars[char] = !hashChars[char] ? 1 : ++hashChars[char];
 
-  return Object.values(hashChars).filter(x => x && x > 1).length;
+  return Object.values(hashChars).filter((x: number) => x && x > 1).length;
 }
